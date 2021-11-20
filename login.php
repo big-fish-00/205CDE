@@ -32,39 +32,64 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 <html>
    <head>
-      <title>Login</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dnet | Sign In Page </title>
       <!-- CSS only -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <link href="css/all.css" rel="stylesheet">
-      <!-- JavaScript Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">        
+      <!--font awesome-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!--font-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&family=Patrick+Hand&display=swap">
+      <!-- font-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@200&family=Patrick+Hand&display=swap">
+      <!--bootstrap icons-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+      <!----CSS--->
+      <link rel="stylesheet" href="CSS/all.css"/>
+      <!-- inserting javascript -->
+      <!-- <script src="java/homepage.js" async></script> -->
+      <!-- inserting javascript -->
+      <!-- <script src="java/cartpage.js" async></script> -->
+      <!-- inserting javascript -->
    </head>
 
    <body>
       <?php include('header.php'); ?>
       <main>
-         <div class="container">
-            <div class="row my-5">
-               <div class="col-lg-4 py-5 text-center mx-auto">
-                  <form action="login.php" method="post" enctype="multipart/form-data">
-                     <h1 class="fs-1 mb-5 fw-bold text-primary">Sign In</h1>
-                     <p class="validation-feedback text-danger" hidden></p>
-                     <div class="form-floating">
-                        <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username" required autofocus>
-                        <label for="floatingInput">Username</label>
+         <div class="all">
+            <div class="me-container">
+               <div class="row ">
+                  <div class="col text-center mx-auto">
+                     <form action="login.php" method="post" enctype="multipart/form-data">
+                        <h1 class="text">Sign In</h1>
+   
+                        <p class="validation-feedback text-danger" hidden></p>
+                        <div class="txt_field">
+                           <input type="text" name="username" required autofocus>
+                           <span></span>
+                           <label><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                           <path d="M3 12s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                           </svg> Username</label>
+                       </div>
+   
+                        <div class="txt_field">
+                           <input type="password"  name="password" autocomplete="new-password" required>
+                           <span></span>
+                           <label><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 2 18 16">
+                           <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                           </svg>Password</label>
+                        </div>
+   
+                        <input type="submit" name="submit" class="button-1" value="Sign In">
+    
+                     </form>
+   
+                     <div class="sign">
+                       Not a member ?
+                       <a href="signup.php" class="text-purple text-decoration-none fw-bold"> Sign Up </a>    
                      </div>
-                     <div class="my-3"></div>
-                     <div class="form-floating">
-                        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="new-password" required>
-                        <label for="floatingPassword">Password</label>
-                     </div>
-                     <div class="my-3"></div>
-                     <button class="btn btn-primary w-100" type="submit">Sign in</button>
-                  </form>
-                  <p class="mb-4 text-sm mx-auto">
-                     Don't have an account?
-                     <a href="signup.php" class="text-purple text-decoration-none fw-bold">Sign up</a>
-                  </p>
+                  </div>
                </div>
             </div>
          </div>

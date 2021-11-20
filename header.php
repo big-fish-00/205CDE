@@ -16,7 +16,7 @@
         <!--bootstrap icons-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <!----CSS--->
-        <link rel="stylesheet" href="css/all.css"/>
+        <link rel="stylesheet" href="CSS/all.css"/>
         <!-- inserting javascript -->
         <!-- <script src="java/homepage.js" async></script> -->
         <!-- inserting javascript -->
@@ -28,7 +28,7 @@
 
     <body>
         <!--header section starts -->
-        <div class="header">
+        <div class="header  sticky-top">
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
@@ -44,7 +44,7 @@
                                 <li><a href="login.php">Login</a></li> 
                                 <li><a href="signup.php">Sign Up</a></li>
                             <?php }else{ ?>
-                                <li><a href="profile.php"><?php echo $_SESSION['user_name']; ?></a></li> 
+                                <li><a href="#"><?php echo $_SESSION['user_name']; ?></a></li> 
                                 <li><a href="logout.php">Logout</a></li>
                             <?php } ?>
                         </ul>
