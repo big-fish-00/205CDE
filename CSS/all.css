@@ -153,8 +153,11 @@ p {
 
 .top {
     background-color: rgb(0, 0, 0);
-    padding-top: 80px;
     padding-left: 350px;
+}
+
+.top .containers {
+    padding-top: 0px;
 }
 
 .counter-container span:not(.animation-counter) {
@@ -235,7 +238,6 @@ p {
 .small-container {
     max-width: 1080px;
     margin: auto;
-    padding-top: 100px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -787,6 +789,112 @@ form .txt_field{
     text-decoration: underline;
 }
 
+.sections {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(240deg, #a2d2ff, #FEEAFA);
+}
+
+.containers {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.container-section {
+    float: left;
+    width: 55%;
+}
+
+.img-section {
+    float: right;
+    width: 35%;
+}
+
+.img-section img {
+    width: 100%;
+    height: auto;
+}
+
+.container-section .about {
+    text-transform: uppercase;
+}
+
+.container-section h6 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-section h2 {
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content p2 {
+    font-size: 20px;
+}
+
+.background {
+    background: linear-gradient(240deg, #a2d2ff, #FEEAFA);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.booking {
+    margin: 0px;
+    padding-top: 50px;
+    padding-left: 40%;
+}
+
+.booking-form {
+    max-width: 350px;
+    border: 2px solid black;
+    padding: 0 20px 20px;
+}
+
+.booking-form label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #000000;
+}
+
+input::placeholder {
+    color: #000000 !important;
+}
+
+.form-control {
+    font-size: 20px;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: #333;
+}
+
+.button{
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 48%;
+    border: none;
+    background: linear-gradient(120deg, #a2d2ff, #FEEAFA);
+    background-size: 200%;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: none;
+    font-family: cursive;
+    transition: .5s;
+  }
+  
+  .button:hover{
+      background-position: right;
+  }
 
 @media screen and (max-width: 800px) {
     nav ul {

@@ -26,29 +26,25 @@ session_start();
       <?php include('header.php'); ?>
       <main>
          <div class="sections">
-            <div class = "container">
+            <div class = "containers">
                <div class="container-section">
                   <div class="about">
-                     <h6>About Us</h6>
+                     <h6>About Us</h6></br>
                   </div>
                   <div class="content">
-                     <h2>There are many variations of passages of Lorem Ipsum available. </h2>
-                     <p>
-                        but the majority have suffered alteration in some form, by injected humour, 
-                        or randomised words which don't look even slightly believable. 
-                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-                        on the Internet tend to repeat predefined chunks as necessary, making this the first 
-                        true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-                        with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
-                        The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic 
-                        words etc.
-                     </p>
+                     <h2>Dnet Power Computer</h2></br>
+                     <p2>
+                     This is a computer store located in Alor Setar. 
+                     The store offers computers, printers, computer accessories, mice and more. In addition, repair services are also available here. 
+                     For more information, please call the number below. </br>
+                     Phone-number: 012-432-9032 </br>
+                     Address: NO 180, Jalan ONE UTAMA, SIMPANG KUALA, 07700 ALOR SETAR, KEDAH. 
+                     </p2>
                   </div>
+               </div>
 
-                  <div class="img-section">
-                     <img src="img/dent.jpg">
-                  </div>
+               <div class="img-section py-5">
+                     <img src="img/dnet.jpg"> 
                </div>
             </div>
          </div>
