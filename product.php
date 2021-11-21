@@ -29,7 +29,7 @@ session_start();
                <h2 class="title">All Products</h2>
                <?php 
                $conn = mysqli_connect('localhost', 'root', '', 'bigfish');
-               $sql = "SELECT * FROM table_product LIMIT 3";
+               $sql = "SELECT * FROM table_product";
                if($result = mysqli_query($conn, $sql)){
                       if(mysqli_num_rows($result)>0){
                           while($row = mysqli_fetch_assoc($result)){
@@ -46,7 +46,7 @@ session_start();
                             <i class="bi bi-star"></i>
                         </div>
                         <p class="card-text"><?php echo $row['product_price']; ?></p>
-                        <a href="details.php?id=<?php echo $row['product_id']; ?>" class="btn btn-primary">Check it out</a>
+                        <a href="details.php?id=<?php echo $row['product_id']; ?>" class="detail-button">Details</a>
                </div>
                
                <?php }}} ?>

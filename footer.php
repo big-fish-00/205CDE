@@ -32,16 +32,16 @@
                     </div>
                     <div class="footer-col-2">
                         <img src="img/power.png" alt="">
-                        <p>We builds smiles </p>
+                        <p>We build smiles </p>
                     </div>
                     <div class="footer-col-3">
                         <h3>Nav Links</h3>
                         <ul>
-                            <a href="HomePage.html"><li>Home</li></a>
-                            <a href="Product.html"><li>Product</li></a>
-                            <a href=""><li>About</li></a>
-                            <a href=""><li>Tracking</li></a>
-                            <a href=""><li>Profile</li></a>
+                            <a href="home.php"><li>Home</li></a>
+                            <a href="product.php"><li>Product</li></a>
+                            <a href="about.php"><li>About</li></a>
+                            <a href="tracking.php"><li>Tracking</li></a>
+                            <a href="login.php"><li>Login</li></a>
                         </ul>
                     </div>
                     <div class="footer-col-4">

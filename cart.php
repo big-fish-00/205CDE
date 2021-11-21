@@ -1,6 +1,7 @@
 <?php 
-
+session_start();
 ?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -44,10 +45,10 @@
             <div class="cart-items">
                 <div class="cart-row">
                     <div class="cart-item cart-column">
-                        <img class="cart-item-image" src="img/M15.jpeg" width="100" height="100">
-                        <span class="cart-item-title">T-Shirt</span>
+                        <img class="cart-item-image" src="img/in153.jpg" width="100" height="100">
+                        <span class="cart-item-title">Inspiron 15 3000 laptop</span>
                     </div>
-                    <span class="cart-price cart-column">RM3200</span>
+                    <span class="cart-price cart-column">RM 2249</span>
                     <div class="cart-quantity cart-column">
                         <input class="cart-quantity-input" type="number" value="1">
                         <button class="btn btn-danger" type="button">REMOVE</button>
@@ -55,21 +56,21 @@
                 </div>
                 <div class="cart-row">
                     <div class="cart-item cart-column">
-                        <img class="cart-item-image" src="img/M15.jpeg" width="100" height="100">
-                        <span class="cart-item-title">Album 3</span>
+                        <img class="cart-item-image" src="img/h732.png" width="100" height="100">
+                        <span class="cart-item-title">ASUS ROG STRIX G17</span>
                     </div>                    
-                    <span class="cart-price cart-column">RM2500</span>
+                    <span class="cart-price cart-column">RM 4399</span>
                     <div class="cart-quantity cart-column">
-                        <input class="cart-quantity-input" type="number" value="2">
+                        <input class="cart-quantity-input" type="number" value="1">
                         <button class="btn btn-danger" type="button">REMOVE</button>
                     </div>
                 </div>
             </div>
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">RM2000</span>
+                <span class="cart-total-price">RM6648</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <a href="home.php"><button class="btn btn-primary btn-purchase" type="button">PURCHASE</button></a>
         </section>
         <!-- cart item details ends -->
 

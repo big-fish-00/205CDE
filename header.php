@@ -17,10 +17,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <!----CSS--->
         <link rel="stylesheet" href="CSS/all.css"/>
-        <!-- inserting javascript -->
-        <!-- <script src="java/homepage.js" async></script> -->
-        <!-- inserting javascript -->
-        <!-- <script src="java/cartpage.js" async></script> -->
+        
         <!-- inserting javascript -->
         <script src="java/header.js" async></script>
         
@@ -32,7 +29,7 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                        <a href=""><h1>Dnet</h1></a>
+                        <a href="about.php"><h1>Dnet</h1></a>
                     </div>
                     <nav>
                         <ul>
@@ -67,5 +64,19 @@
         </div>     
         <!-- header section ends --> 
 
+        <script type="text/javascript">
+          let input = document.querySelector("#search")
+          let search = document.querySelector("#search");
+          let fdj = document.querySelector("label.fas.fa-search");
+          let nav = document.querySelector("ul");
+          search.addEventListener("mouseenter", e => { nav.style.display = "none"; });
+          search.addEventListener("mouseleave", e => { nav.style.display = "block"; });
+          input.addEventListener("focus", e => { fdj.style.display = "none"; });
+          input.addEventListener("blur", e => { fdj.style.display = "block"; });
+      
+        </script>
+
     </body>
+    <!-- inserting javascript -->
+    <!-- <script src="java/homepage.js" async></script> -->
 </html>

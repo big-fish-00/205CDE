@@ -30,14 +30,13 @@ session_start();
             <div class="containers">
                 <div class="row">
                     <div class="col-2">
-                        <h2>Asus Laptop</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Voluptas unde <br> excepturi saepe sit optio odit recusandae 
-                            nesciunt doloremque nulla velit?</p>
-                        <button id="add-animation" class="cart-button">Add to cart <i class="bi bi-cart-fill"></i></button>
+                        <h2>Inspiron 15 3000 Laptop</h2>
+                        <p>Operating System
+                           Windows 11 Home, English </br> Video Card Intel® UHD Graphics </br>Display 15.6-inch FHD (1920 x 1080) Anti-glare LED Backlight Non-Touch Narrow Border WVA Display
+                           </br>Memory 4 GB, 1 x 4 GB, DDR4, 2666 MHz </br>Hard Drive 256 GB, M.2, PCIe NVMe, SSD</p>
                     </div>
                     <div class="col-2">
-                        <img src="img/guai.png" alt="">                     
+                        <img src="img/in153.jpg" alt="">                     
                     </div>
                 </div>
             </div>
@@ -51,10 +50,10 @@ session_start();
                         <img src="img/M15.jpeg" alt="">
                     </div>
                     <div class="col-3">
-                        <img src="img/M15.jpeg" alt="">
+                        <img src="img/mate13.png" alt="">
                     </div>
                     <div class="col-3">
-                        <img src="img/M15.jpeg" alt="">
+                        <img src="img/zen.png" alt="">
                     </div>
                 </div>
             </div>
@@ -67,7 +66,7 @@ session_start();
                <h1 class="title">Featured Products</h1>
                <?php 
                $conn = mysqli_connect('localhost', 'root', '', 'bigfish');
-               $sql = "SELECT * FROM table_product LIMIT 3";
+               $sql = "SELECT * FROM table_product LIMIT 4";
                if($result = mysqli_query($conn, $sql)){
                       if(mysqli_num_rows($result)>0){
                           while($row = mysqli_fetch_assoc($result)){
@@ -84,7 +83,7 @@ session_start();
                             <i class="bi bi-star"></i>
                         </div>
                         <p class="card-text"><?php echo $row['product_price']; ?></p>
-                        <a href="details.php?id=<?php echo $row['product_id']; ?>" class="btn btn-primary">Check it out</a>
+                        <a href="details.php?id=<?php echo $row['product_id']; ?>" class="detail-button">Details</a>
                </div>
                
                <?php }}} ?>
@@ -98,17 +97,15 @@ session_start();
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="img/guai.png" class="offer-img" alt="">
+                        <img src="img/mate.jpg" class="offer-img" alt="">
                     </div>
                     <div class="col-2">
-                        <p>Only Available on Dnet</p>
-                        <h2>Laptop 1</h2>
+                        <p>Up Coming</p>
+                        <h2>HUAWEI MateBook X Pro 2021</h2>
                         <small>
-                            HIDHFOEIHOIFOFOI
-                            FEHIHIHFIUHFIUHEIHIFH
-                            FEHFOEFOEHOFHOHO
+                            Windows 10 Home (Free upgrade to Windows 11)</br>Dimensions Width 304 mm
+                            </br>Height 14.6 mm Weight Approx. 1.33 kg
                         </small>
-                        <a href="CartPage.html" class="cart-button">Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -122,8 +119,8 @@ session_start();
                 <div class="row">
                     <div class="col-3">
                         <i class="fas fa-quote-left"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui dolor 
-                            porro voluptatem autem, esse voluptate aut dolore? Dignissimos, impedit?</p>
+                        <p>The service at this store is excellent and the prices are very reasonable. 
+                           The owner was very patient in explaining the different features and recommending the suitable laptops for me.</p>
                         <div class="colon">
                             <i class="fas fa-quote-right"></i>
                         </div>
@@ -132,22 +129,22 @@ session_start();
                     </div>
                     <div class="col-3">
                         <i class="fas fa-quote-left"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui dolor 
-                            porro voluptatem autem, esse voluptate aut dolore? Dignissimos, impedit?</p>
+                        <p>Whenever there is a problem with laptop, I can always book a time online. 
+                           The staff will also explain the problem after inspection, and they will help to remove the dust.</p>
                         <div class="colon">
                             <i class="fas fa-quote-right"></i>
                         </div>
-                        <img src="img/guai.png" alt="">   
+                        <img src="img/jess.jpg" alt="">   
                         <h3>Jessica</h3>
                     </div>
                     <div class="col-3">
                         <i class="fas fa-quote-left"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui dolor 
-                            porro voluptatem autem, esse voluptate aut dolore? Dignissimos, impedit?</p>
+                        <p>This store is very close to my house, so whenever I want to buy a new laptop, he is the computer store I must go to. 
+                            This store not only provides sales service but also after-sales service, it's great!</p>
                         <div class="colon">
                             <i class="fas fa-quote-right"></i>
                         </div>
-                        <img src="img/guai.png" alt="">   
+                        <img src="img/happy.jpg" alt="">   
                         <h3>Happy</h3>
                     </div>
                 </div>
@@ -161,19 +158,19 @@ session_start();
             <div class="small-container">
                 <div class="row">
                     <div class="col-5">
-                        <img src="img/s.jpg" alt="">
+                        <img src="img/dell.jpg" alt="">
                     </div>
                     <div class="col-5">
-                        <img src="img/s.jpg" alt="">
+                        <img src="img/asus.jpg" alt="">
                     </div>
                     <div class="col-5">
-                        <img src="img/s.jpg" alt="">
+                        <img src="img/huawei.jpg" alt="">
                     </div>
                     <div class="col-5">
-                        <img src="img/s.jpg" alt="">
+                        <img src="img/hp.jpg" alt="">
                     </div>
                     <div class="col-5">
-                        <img src="img/s.jpg" alt="">
+                        <img src="img/acer.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -181,40 +178,7 @@ session_start();
         <!-- brand section ends -->
 
         <!--  footer section starts -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Memes</h3>
-                        <p> I changed my password everywhere to 'incorrect.' That way when I forget it, 
-                        it always reminds me, 'Your password is incorrect.'  </p>
-                    </div>
-                    <div class="footer-col-2">
-                        <img src="img/power.png" alt="">
-                        <p>We builds smiles </p>
-                    </div>
-                    <div class="footer-col-3">
-                        <h3>Nav Links</h3>
-                        <ul>
-                            <a href="HomePage.html"><li>Home</li></a>
-                            <a href="Product.html"><li>Product</li></a>
-                            <a href=""><li>About</li></a>
-                            <a href=""><li>Tracking</li></a>
-                            <a href=""><li>Profile</li></a>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <a href="https://www.facebook.com/"><li>Facebook</li></a>
-                            <a href="https://www.instagram.com/"><li>Instagram</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copyright">&copy; Copyright 2021 by —— Big Fish</p>
-            </div>
-        </div>
+        <?php include('footer.php'); ?>
         <!--  footer section ends -->
 
 

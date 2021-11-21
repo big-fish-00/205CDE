@@ -33,6 +33,8 @@ if(isset($_GET['id'])) {
         <link rel="stylesheet" href="CSS/all.css"/>
         <!-- inserting javascript -->
         <script src="java/cartpage.js" async></script>
+        <!-- inserting javascript -->
+        <!-- <script src="java/header.js" async></script> -->
     </head>
 
     <body>
@@ -47,36 +49,20 @@ if(isset($_GET['id'])) {
     		<div class="row">
     			<div class="col-2">
                     <img class="shop-item-image" style="object-fit: cover;" id="ProductImg" src="img/<?php echo $row['product_image']; ?>">
-
-                    <div class="small-img-row">
-                        <div class="small-img-col">
-                            <img src="img/M15.jpeg" alt="" width="100%" class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="img/s.jpg" alt="" width="100%" class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="img/M15.jpeg" alt="" width="100%" class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="img/s.jpg" alt="" width="100%" class="small-img">
-                        </div>
-                    </div>
                 </div>
 
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate fadeInUp ftco-animated">
     				<h2  class="shop-item-title"><?php echo $row['product_name']; ?></h2>
     				<p2 class="shop-item-price"><span> RM <?php echo $row['product_price']; ?></span></p2></br>
-                    <h3>Product Details <i class="bi bi-journal-text"></i></h3>
-    				<p2>Tomato, (Solanum lycopersicum), flowering plant of the nightshade family (Solanaceae), cultivated extensively for 
-                        its edible fruits. Labelled as a vegetable for nutritional purposes, tomatoes are a good source of vitamin C and the phytochemical lycopene.</p2>
+                    <h3>Tips <i class="bi bi-journal-text"></i></h3>
+    				<p2> Pick the laptop that you liked !</p2>
                    <form action="add-to-cart.php" method="post" enctype="multipart/form-data">
                       <div class="row mt-4">
                         <label for="qty" class="form-label">Quantity:
                          <input type="number" min="1" max="10" maxlength="2" name="quantity" value="1" id="qty" class="form-control w-25"></label>
                          <input type="hidden" value="<?php echo $row['product_id']; ?>" name="product_id">
                      </div>
-                      <button type="submit" class="cart-button">Add to Cart</button>
+                      <button type="submit" class="cart-button" id="add-animation">Add to Cart</button>
                    </form>
     			</div>
     		</div>
@@ -87,71 +73,41 @@ if(isset($_GET['id'])) {
         <div class="small-container multiple-product">
             <div class="row row-2">
                 <h2>Related Products</h2>
-                <a href="Product.html">View More</a>
+                <a href="product.php">View More</a>
             </div>
         </div>
 
         <!-- single product section ends  -->
 
         <!-- features product section starts  -->
-        <div class="small-container">
-
-            <div class="row">
-                <div class="col-4">
-                    <img src="img/M15.jpeg" alt="">
-                    <h4>Laptop 1</h4>
-                    <div class="rating">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <p>RM3000</p>
-                    <a href="Details.html" class="detail-button">Details</a>
-
-                </div>
-                <div class="col-4">
-                    <img src="img/M15.jpeg" alt="">
-                    <h4>Laptop 1</h4>
-                    <div class="rating">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <p>RM3000</p>
-                    <a href="Details.html" class="detail-button">Details</a>
-                </div>
-                <div class="col-4">
-                    <img src="img/guai.png" alt="">
-                    <h4>Laptop 1</h4>
-                    <div class="rating">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <p>RM3000</p>
-                    <a href="Details.html" class="detail-button">Details</a>
-                </div>
-                <div class="col-4">
-                    <a href=""></a>
-                    <img src="img/M15.jpeg" alt="">
-                    <h4>Laptop 1</h4>
-                    <div class="rating">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                    </div>
-                    <p>RM3000</p>
-                    <a href="Details.html" class="detail-button">Details</a>
-                </div>
-            </div>
+        <div class = "down">
+          <div class="small-container">
+              <div class="row row-3">
+                 <?php 
+                 $conn = mysqli_connect('localhost', 'root', '', 'bigfish');
+                 $sql = "SELECT * FROM table_product LIMIT 4";
+                 if($result = mysqli_query($conn, $sql)){
+                        if(mysqli_num_rows($result)>0){
+                            while($row = mysqli_fetch_assoc($result)){
+                  ?>
+  
+                  <div class="col-4">
+                      <img class="" src="img/<?php echo $row['product_image']; ?>">
+                          <h5 class="card-title"><?php echo $row['product_name']; ?></h5>                    
+                          <div class="rating">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star"></i>
+                          </div>
+                          <p class="card-text"><?php echo $row['product_price']; ?></p>
+                          <a href="details.php?id=<?php echo $row['product_id']; ?>" class="detail-button">Details</a>
+                 </div>
+                 
+                 <?php }}} ?>
+              </div>
+           </div>                            
         </div>
         
         <!-- product section ends -->
@@ -180,7 +136,7 @@ if(isset($_GET['id'])) {
         </script>
 
         <!-- single product gallery -->
-
+<!-- 
         <script>
             var ProductImg = document.getElementById("ProductImg");
             var SmallImg = document.getElementsByClassName ("small-img");
@@ -202,7 +158,7 @@ if(isset($_GET['id'])) {
             }
 
 
-        </script>
+        </script> -->
 
 
     </body>
